@@ -3,120 +3,173 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Magic Globe — Support &amp; Privacy</title>
-<meta name="description" content="Support and privacy policy for Magic Globe, a playful 3D world atlas for kids." />
+<title>Magic Globe — A playful 3D world atlas for kids</title>
+<meta name="description" content="Spin a beautiful 3D Earth with your hand or your voice. 177 countries, 114 landmarks, 60 sea creatures. No ads, no data collected, works offline. Made for curious kids." />
+<meta property="og:title" content="Magic Globe — A playful 3D world atlas for kids" />
+<meta property="og:description" content="Spin a beautiful 3D Earth with your hand or your voice. No ads, no data, fully offline." />
 <style>
   :root{
-    --bg:#f6f8fc; --card:#ffffff; --ink:#0d1b34; --muted:#5a6b86;
-    --line:#e6ecf5; --brand1:#fb8500; --brand2:#ffb703; --link:#0a66c2;
-  }
-  @media (prefers-color-scheme: dark){
-    :root{ --bg:#070b1c; --card:#0f1730; --ink:#eaf1ff; --muted:#9fb0cc;
-      --line:#1e2a49; --link:#7fb3ff; }
+    --bg:#060a20; --bg2:#0b1330; --ink:#eaf1ff; --muted:#9db0d0;
+    --line:#1c2848; --card:#0e1732;
+    --sun1:#fb8500; --sun2:#ffb703; --sky:#8ecdf9;
   }
   *{box-sizing:border-box}
   html,body{margin:0}
-  body{background:var(--bg);color:var(--ink);
-    font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"PingFang SC","Microsoft YaHei",sans-serif;
-    -webkit-font-smoothing:antialiased;padding:0 20px 64px;}
-  .wrap{max-width:720px;margin:0 auto}
-  header{padding:56px 0 8px;text-align:center}
-  .logo{font-size:60px;line-height:1;filter:drop-shadow(0 6px 16px rgba(251,133,0,.25))}
-  h1{font-size:30px;margin:14px 0 6px;letter-spacing:-.4px}
-  .tag{color:var(--muted);margin:0 0 8px}
-  .accent{height:5px;width:96px;margin:18px auto 0;border-radius:999px;
-    background:linear-gradient(90deg,var(--brand1),var(--brand2))}
-  section{background:var(--card);border:1px solid var(--line);border-radius:18px;
-    padding:22px 24px;margin:22px 0;box-shadow:0 8px 30px rgba(13,27,52,.05)}
-  h2{font-size:20px;margin:2px 0 12px}
-  h3{font-size:16px;margin:18px 0 4px}
-  p{margin:8px 0}
-  a{color:var(--link);text-decoration:none}
-  a:hover{text-decoration:underline}
-  .mail{display:inline-block;font-weight:700;font-size:18px;
-    background:linear-gradient(135deg,var(--brand1),var(--brand2));
-    color:#fff;padding:11px 20px;border-radius:999px;margin:6px 0 4px;
-    box-shadow:0 8px 22px rgba(251,133,0,.35)}
-  .mail:hover{text-decoration:none;filter:brightness(1.03)}
-  .muted{color:var(--muted)}
-  .faq b{display:block;margin-top:14px}
-  .policy h3{color:var(--ink)}
-  footer{text-align:center;color:var(--muted);font-size:13px;margin-top:30px}
-  ul{margin:8px 0;padding-left:22px}
-  li{margin:4px 0}
+  body{
+    background:
+      radial-gradient(1100px 620px at 50% -8%, #16224b 0%, rgba(6,10,32,0) 62%),
+      linear-gradient(180deg,var(--bg) 0%, var(--bg2) 55%, var(--bg) 100%);
+    background-attachment:fixed;
+    color:var(--ink);
+    font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"PingFang SC","Microsoft YaHei",sans-serif;
+    -webkit-font-smoothing:antialiased;
+    padding:0 20px 70px;
+  }
+  .wrap{max-width:960px;margin:0 auto}
+
+  /* hero */
+  header{text-align:center;padding:72px 0 8px}
+  .logo{font-size:74px;line-height:1;filter:drop-shadow(0 10px 30px rgba(142,205,249,.35))}
+  h1{font-size:44px;line-height:1.1;margin:16px 0 10px;letter-spacing:-1px}
+  .grad{background:linear-gradient(120deg,var(--sun2),var(--sun1));
+    -webkit-background-clip:text;background-clip:text;color:transparent}
+  .tag{font-size:20px;color:var(--muted);margin:0 auto 22px;max-width:34ch}
+  .badges{display:flex;gap:9px;flex-wrap:wrap;justify-content:center;margin-bottom:10px}
+  .badge{font-size:13px;font-weight:700;padding:8px 14px;border-radius:999px;
+    background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);color:var(--ink)}
+  .soon{display:inline-block;margin-top:16px;font-size:14px;font-weight:700;color:#0b1533;
+    background:linear-gradient(135deg,var(--sun1),var(--sun2));padding:11px 22px;border-radius:999px;
+    box-shadow:0 10px 30px rgba(251,133,0,.35)}
+
+  /* two-up highlight */
+  h2{font-size:28px;text-align:center;margin:64px 0 6px;letter-spacing:-.4px}
+  .lede{text-align:center;color:var(--muted);margin:0 auto 30px;max-width:46ch}
+  .duo{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+  .duo figure{margin:0;text-align:center}
+  .duo img{width:100%;max-width:330px;border-radius:20px;border:1px solid var(--line);
+    box-shadow:0 22px 60px rgba(0,0,0,.55)}
+  .duo figcaption{margin-top:14px}
+  .duo b{display:block;font-size:18px;margin-bottom:2px}
+  .duo span{color:var(--muted);font-size:15px}
+
+  /* feature grid */
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:12px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:16px;
+    box-shadow:0 12px 36px rgba(0,0,0,.35)}
+  .card img{width:100%;border-radius:12px;display:block;border:1px solid var(--line)}
+  .card b{display:block;margin:14px 0 3px;font-size:16px}
+  .card p{margin:0;color:var(--muted);font-size:14px;line-height:1.55}
+
+  /* trust */
+  .trust{margin-top:64px;background:var(--card);border:1px solid var(--line);border-radius:22px;padding:28px 26px}
+  .trust h2{margin:0 0 6px;font-size:24px}
+  .tlist{display:grid;grid-template-columns:repeat(2,1fr);gap:10px 26px;margin-top:16px}
+  .tlist div{display:flex;gap:10px;align-items:flex-start;font-size:15px}
+  .tick{color:var(--sun2);font-weight:900}
+
+  footer{text-align:center;margin-top:56px;color:var(--muted);font-size:14px}
+  footer a{color:var(--sky);text-decoration:none;font-weight:700}
+  footer a:hover{text-decoration:underline}
+  .copy{margin-top:10px;font-size:13px;opacity:.75}
+
+  @media (max-width:760px){
+    h1{font-size:34px} .tag{font-size:18px}
+    .duo{grid-template-columns:1fr;gap:34px}
+    .grid{grid-template-columns:1fr 1fr}
+    .tlist{grid-template-columns:1fr}
+  }
+  @media (max-width:460px){ .grid{grid-template-columns:1fr} }
 </style>
 </head>
 <body>
 <div class="wrap">
+
   <header>
     <div class="logo">🌍</div>
-    <h1>Magic Globe</h1>
-    <p class="tag">A playful 3D world atlas for curious kids.</p>
-    <div class="accent"></div>
+    <h1>Magic Globe<br><span class="grad">for curious kids</span></h1>
+    <p class="tag">Spin a beautiful 3D Earth — with a wave of your hand, or just by asking.</p>
+    <div class="badges">
+      <span class="badge">🚫 No ads</span>
+      <span class="badge">🚫 No in‑app purchases</span>
+      <span class="badge">🔒 No data collected</span>
+      <span class="badge">✈️ Works offline</span>
+      <span class="badge">👶 Ages 4+</span>
+    </div>
+    <div class="soon">🚀 Coming soon to the App Store</div>
   </header>
 
-  <section>
-    <h2>Support</h2>
-    <p>Have a question, found a bug, or want to suggest a feature? We'd love to hear from you and usually reply within a couple of days.</p>
-    <p><a class="mail" href="mailto:dushibing555@gmail.com?subject=Magic%20Globe%20Support">✉️ dushibing555@gmail.com</a></p>
-    <p class="muted">Magic Globe is made by an independent developer. There are no ads, no in‑app purchases, and no accounts.</p>
-  </section>
+  <h2>Touch the world without touching the screen</h2>
+  <p class="lede">Two ways to explore that kids actually find magical — both running entirely on the device.</p>
+  <div class="duo">
+    <figure>
+      <img src="img/gesture.jpg" alt="Hand-gesture control: wave to spin the globe" />
+      <figcaption>
+        <b>🖐️ Hand gestures</b>
+        <span>Wave to spin, pinch to zoom, point to pick a country. The front camera reads the hand on‑device — nothing is recorded.</span>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="img/voice.jpg" alt="Voice control: say take me to France" />
+      <figcaption>
+        <b>🎤 Voice control</b>
+        <span>Just say “Take me to France” or “Zoom in,” and the globe flies there. English and Chinese.</span>
+      </figcaption>
+    </figure>
+  </div>
 
-  <section class="faq">
-    <h2>Frequently asked questions</h2>
+  <h2>A whole planet to get lost in</h2>
+  <p class="lede">Every country has a story, every ocean has creatures, every corner has a wonder.</p>
+  <div class="grid">
+    <div class="card">
+      <img src="img/country.jpg" alt="Country card with story and fun facts" />
+      <b>177 countries</b>
+      <p>Tap any country to hear a warm, kid‑friendly introduction and fun facts — read aloud.</p>
+    </div>
+    <div class="card">
+      <img src="img/ocean.jpg" alt="Ocean world with sea creatures" />
+      <b>Ocean World</b>
+      <p>Dive under the sea and meet 60 sea creatures, matched to the real ocean you tapped.</p>
+    </div>
+    <div class="card">
+      <img src="img/landmarks.jpg" alt="World landmarks pinned on the globe" />
+      <b>114 landmarks</b>
+      <p>The Great Wall, the Taj Mahal, the Eiffel Tower — each with a real photo and its story.</p>
+    </div>
+    <div class="card">
+      <img src="img/realearth.jpg" alt="Realistic satellite Earth from space" />
+      <b>Real Earth</b>
+      <p>Flip to a satellite view and see the real deserts, forests, snow and seas from space.</p>
+    </div>
+    <div class="card">
+      <img src="img/globe.jpg" alt="Colourful political globe" />
+      <b>A globe that invites play</b>
+      <p>Bright, friendly colours, smooth spinning, and a little surprise when kids find their own country.</p>
+    </div>
+    <div class="card">
+      <img src="img/states.jpg" alt="Zoom in to see provinces and states" />
+      <b>Zoom right in</b>
+      <p>Provinces and states appear with crisp borders as you zoom — from the whole planet to your region.</p>
+    </div>
+  </div>
 
-    <b>Hand gestures aren't working.</b>
-    <p>Gesture control needs camera permission and decent lighting. Tap <b>Gestures</b>, allow the camera when asked, and hold your open hand a bit back from the screen so the front camera can see it. You can always spin the globe by touch instead.</p>
-
-    <b>Voice control isn't responding.</b>
-    <p>Tap <b>Speak</b> and allow the microphone when asked, then say a short command like "take me to France" or "zoom in." Voice works best in a quiet room. It's completely optional.</p>
-
-    <b>There's no sound.</b>
-    <p>Check that your device isn't muted and the volume is up. You can also tap <b>Sound</b> in the app to toggle audio.</p>
-
-    <b>How do I switch between English and Chinese?</b>
-    <p>Tap the <b>🌐</b> language button in the top toolbar.</p>
-
-    <b>Does it work offline?</b>
-    <p>Yes. All maps, country facts, landmarks and images are built into the app, so it works fully offline with no internet connection.</p>
-
-    <b>Is it safe for children?</b>
-    <p>Yes. No ads, no in‑app purchases, no accounts, and no data collection. See the privacy policy below.</p>
-  </section>
-
-  <section class="policy">
-    <h2>Privacy Policy</h2>
-    <p class="muted">Last updated: 14 July 2026</p>
-    <p>Magic Globe ("the App") is an educational globe app for children. We take children's privacy seriously. This policy explains, in plain language, what the App does with data.</p>
-
-    <h3>We do not collect any data</h3>
-    <p>The App does <b>not</b> collect, store, transmit, or share any personal information. There are <b>no user accounts</b>, <b>no analytics</b>, <b>no advertising</b>, and <b>no third‑party tracking</b> of any kind. The App does not send any data off your device.</p>
-
-    <h3>Camera</h3>
-    <p>The App can use the device camera <b>only</b> for the optional hand‑gesture feature, so a child can spin the globe and pick countries with hand movements. The camera image is processed <b>entirely on the device, in real time</b>, to detect hand position. It is <b>never recorded, saved, or uploaded</b>. The camera is used only while the gesture feature is turned on, and only after you grant permission. You can use the whole App with touch instead and never enable the camera.</p>
-
-    <h3>Microphone &amp; voice control</h3>
-    <p>The App has an optional voice‑control feature, so a child can say things like "take me to France" or "zoom in." Only when you turn this feature on and grant microphone permission does the App listen and turn speech into text using Apple's built‑in Speech Recognition. On devices that support it, this runs <b>on your device</b>; on some older devices Apple may transcribe the audio on Apple's servers, under Apple's own privacy policy. In all cases, <b>the App itself never records, stores, or shares your audio</b>, and the microphone is used only while voice control is turned on. You can use the whole App without ever enabling voice control.</p>
-
-    <h3>Reading aloud</h3>
-    <p>The App can read country descriptions and fun facts aloud using your device's built‑in text‑to‑speech. This happens on the device; no audio is recorded or sent anywhere.</p>
-
-    <h3>Network</h3>
-    <p>The App's content (maps, country facts, images) is bundled inside the App and works offline. The App does not require an internet connection and does not transmit data.</p>
-
-    <h3>Children</h3>
-    <p>The App is designed for children and does not knowingly collect any information from anyone, including children under 13.</p>
-
-    <h3>Changes</h3>
-    <p>If this policy changes, we will update this page and the "Last updated" date.</p>
-
-    <h3>Contact</h3>
-    <p>Questions? Contact: <a href="mailto:dushibing555@gmail.com">dushibing555@gmail.com</a></p>
-  </section>
+  <div class="trust">
+    <h2>Built for parents' peace of mind</h2>
+    <p class="lede" style="margin:0;text-align:left;max-width:none">Magic Globe is a quiet, screen‑time‑worthy corner of the App Store.</p>
+    <div class="tlist">
+      <div><span class="tick">✓</span><span><b>No ads, ever.</b> Nothing interrupts, nothing pesters.</span></div>
+      <div><span class="tick">✓</span><span><b>No in‑app purchases.</b> One price, everything included.</span></div>
+      <div><span class="tick">✓</span><span><b>No accounts, no sign‑up.</b> Open it and play.</span></div>
+      <div><span class="tick">✓</span><span><b>Collects no data.</b> Nothing leaves the device — ever.</span></div>
+      <div><span class="tick">✓</span><span><b>Camera &amp; microphone are optional</b> and processed on‑device; never recorded or uploaded.</span></div>
+      <div><span class="tick">✓</span><span><b>Fully offline.</b> Great for planes, cars and long waits.</span></div>
+    </div>
+  </div>
 
   <footer>
-    © 2026 Magic Globe · Made with care for curious kids 🌍
+    <p><a href="support.html">Support &amp; Privacy Policy</a> · <a href="mailto:dushibing555@gmail.com">Contact us</a></p>
+    <p class="copy">© 2026 Shibing Du · Made with care for curious kids 🌍</p>
   </footer>
+
 </div>
 </body>
 </html>
