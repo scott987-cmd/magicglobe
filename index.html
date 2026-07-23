@@ -37,9 +37,10 @@
   .badges{display:flex;gap:9px;flex-wrap:wrap;justify-content:center;margin-bottom:10px}
   .badge{font-size:13px;font-weight:700;padding:8px 14px;border-radius:999px;
     background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);color:var(--ink)}
-  .soon{display:inline-block;margin-top:16px;font-size:14px;font-weight:700;color:#0b1533;
-    background:linear-gradient(135deg,var(--sun1),var(--sun2));padding:11px 22px;border-radius:999px;
-    box-shadow:0 10px 30px rgba(251,133,0,.35)}
+  .soon{display:inline-block;margin-top:16px;font-size:16px;font-weight:800;color:#0b1533;
+    background:linear-gradient(135deg,var(--sun1),var(--sun2));padding:13px 28px;border-radius:999px;
+    box-shadow:0 10px 30px rgba(251,133,0,.35);text-decoration:none;transition:filter .15s,transform .15s}
+  .soon:hover{filter:brightness(1.06);transform:translateY(-1px)}
 
   /* two-up highlight */
   h2{font-size:28px;text-align:center;margin:64px 0 6px;letter-spacing:-.4px}
@@ -95,7 +96,7 @@
       <span class="badge">✈️ Works offline</span>
       <span class="badge">👶 Ages 4+</span>
     </div>
-    <div class="soon">🚀 Coming soon to the App Store</div>
+    <a class="soon" href="https://apps.apple.com/app/id6790617812" target="_blank" rel="noopener"> Download on the App Store</a>
   </header>
 
   <h2>Touch the world without touching the screen</h2>
